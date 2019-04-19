@@ -1,0 +1,21 @@
+functions:
+  hello:
+    handler: src/handler.hello
+    package:
+      include:
+        - src/handler.js
+    events:
+      - http:
+          path: hello
+          method: get
+          documentation:
+            summary: "Serverless hello world"
+            methodResponses:
+              -
+                statusCode: "200"
+                responseBody:
+                  description: "Hello world response"
+              -
+                statusCode: "502"
+                responseModels:
+                  "application/json": "awsError"

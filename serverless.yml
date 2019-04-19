@@ -1,0 +1,30 @@
+service: serverless-aws-node-starter-example
+
+package:
+  individually: true
+  exclude:
+    - "*"
+    - .output/**
+    - docs/**
+    - src/**
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: ${opt:STAGE, 'dev'}
+  region: ${opt:AWS_REGION, 'eu-west-1'}
+  tags:
+    PROJECT: ${self:service}
+
+plugins:
+  - serverless-aws-documentation
+  - serverless-offline
+  - serverless-stack-output
+
+custom:
+  output:
+    file: .serverless/output.json
+  documentation: ${file(./docs/docs.yml):custom.documentation}
+
+functions:
+  hello: ${file(./src/handler.yml):functions.hello}

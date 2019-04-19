@@ -1,0 +1,12 @@
+# package directories
+node_modules
+jspm_packages
+
+# Serverless directories
+.serverless
+
+# output directory for results
+.output
+
+## Swagger API file
+docs/api.json
