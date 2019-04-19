@@ -2,22 +2,13 @@
   "name": "serverless-aws-node-starter-example",
   "version": "1.0.0",
   "description": "AWS Node.js starter for the Serverless Framework",
-  "homepage": "https://github.com/dczepierga/serverless-aws-node-starter#readme",
-  "bugs": "https://github.com/dczepierga/serverless-aws-node-starter/issues",
+  "homepage": "https://github.com/garrettmac/serverless-aws-node-starter#readme",
+  "bugs": "https://github.com/garrettmac/serverless-aws-node-starter/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dczepierga/serverless-aws-node-starter.git"
-  },
-  "author": {
-    "name": "Damian Czepierga",
-    "email": "damian@czepierga.pl",
-    "url": "https://czepierga.pl"
+    "url": "https://github.com/garrettmac/serverless-aws-node-starter-example.git"
   },
   "license": "MIT",
-  "engines": {
-    "node": "8.10.0",
-    "npm": "5.6.0"
-  },
   "scripts": {
     "build": "sls package",
     "commit": "git-cz",
@@ -30,7 +21,7 @@
     "lint": "eslint src",
     "lint:fix": "eslint --fix src",
     "lint:watch": "esw --watch --fix src",
-    "release": "GITHUB_TOKEN=b0898bc8123bbf51a725cb8245cbd1c9abf47d66 semantic-release",
+    "semantic-release": "semantic-release",
     "start": "serverless offline start",
     "test": "jest",
     "test:coverage": "jest --coverage",
@@ -39,7 +30,7 @@
   "devDependencies": {
     "@commitlint/cli": "^7.2.1",
     "@commitlint/config-conventional": "^7.1.2",
-    "commitizen": "^3.0.5",
+    "commitizen": "^3.1.1",
     "cz-conventional-changelog": "^2.1.0",
     "dockerode": "^2.5.7",
     "eslint": "^5.9.0",
@@ -49,8 +40,8 @@
     "husky": "^1.2.0",
     "jest": "^23.6.0",
     "opn-cli": "^4.0.0",
-    "semantic-release": "^15.12.3",
-    "serverless": "^1.33.2",
+    "semantic-release": "^15.13.3",
+    "serverless": "^1.41.0",
     "serverless-aws-documentation": "^1.1.0",
     "serverless-offline": "^3.31.3",
     "serverless-stack-output": "^0.2.3"
