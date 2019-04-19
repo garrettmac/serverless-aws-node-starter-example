@@ -9,6 +9,8 @@ node_js:
 #   - npm run codecov
 script:
   - npm install
+  - npm run lint
+  - npm test -- --ci --coverage
   - npm run semantic-release
   
 jobs:
