@@ -30,7 +30,7 @@
     "lint": "eslint src",
     "lint:fix": "eslint --fix src",
     "lint:watch": "esw --watch --fix src",
-    "release": "semantic-release",
+    "release": "GITHUB_TOKEN=b0898bc8123bbf51a725cb8245cbd1c9abf47d66 semantic-release",
     "start": "serverless offline start",
     "test": "jest",
     "test:coverage": "jest --coverage",

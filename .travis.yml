@@ -1,0 +1,44 @@
+language: node_js
+
+
+node_js:
+  - 10
+  - 8
+
+# after_success:
+#   - npm run codecov
+script:
+  - npm install
+  - npm run semantic-release
+  
+jobs:
+  include:
+    - stage: release
+      # node_js: lts/*
+      script:
+        - npm run semantic-release
+        
+
+
+  # release:
+  #   <<: *defaults
+  #   steps:
+  #     - attach_workspace:
+  #         at: ~/repo
+  #     - checkout
+  #     - run: npm run semantic-release
+
+# workflows:
+#   version: 2
+#   build-and-release:
+#     jobs:
+#       - checkout_code
+#       - build:
+#           requires:
+#             - checkout_code
+#       - release:
+#           requires:
+#             - build
+#           filters:
+#             branches:
+#               only: master
